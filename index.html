@@ -327,9 +327,7 @@
   }
 
   /* overview cards (STEP 01) */
-  .overview-head{margin:2.4rem 0 1.3rem;}
   .overview-head h3{font-size:clamp(1.25rem,2.4vw,1.5rem); font-weight:800; margin:0.4rem 0 0.5rem;}
-  .overview-head p{margin:0; color:var(--text-soft); font-size:0.95rem;}
   .overview-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -695,11 +693,14 @@
   <!-- ===================== 01 ===================== -->
   <section class="chapter" id="intro">
     <div class="wrap">
-      <div class="overview-head">
-        <span class="eyebrow">STEP 01</span>
-        <h3>교육 개요</h3>
-        <p>누가, 무엇을 준비해서, 어떻게 60분을 보내는지 한눈에 확인하세요.</p>
+      <div class="chapter-head overview-head">
+        <div class="head-left">
+          <span class="eyebrow">STEP 01</span>
+          <h3>교육 개요</h3>
+        </div>
+        <div class="chapter-num num">01</div>
       </div>
+      <p class="lede">누가, 무엇을 준비해서, 어떻게 60분을 보내는지 한눈에 확인하세요.</p>
 
       <div class="overview-grid">
         <div class="ov-card">
