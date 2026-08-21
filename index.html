@@ -830,11 +830,11 @@
       <div class="chapter-head">
         <div class="head-left">
           <span class="eyebrow">STEP 04</span>
-          <h2>직접 해보는 실습 미션 5가지</h2>
+          <h2>직접 해보는 실습 미션 4가지</h2>
         </div>
         <div class="chapter-num num">04</div>
       </div>
-      <p class="lede">아래 프롬프트를 그대로 복사해서 팩트챗에 붙여넣고, 결과를 우리 업무 상황에 맞게 다듬어 보세요. 미션 1은 여러 모델 비교, 미션 2는 스튜디오, 미션 3은 프로젝트, 미션 4는 HWP 작성 에이전트, 미션 5는 교내 업무지원 챗봇으로 진행합니다.</p>
+      <p class="lede">아래 프롬프트를 그대로 복사해서 팩트챗에 붙여넣고, 결과를 우리 업무 상황에 맞게 다듬어 보세요. 미션 1은 여러 모델 비교, 미션 2는 교내 업무지원 챗봇, 미션 3은 프로젝트, 미션 4는 HWP 작성 에이전트로 진행합니다.</p>
 
       <ol class="mission-list">
         <li class="mission-card">
@@ -871,31 +871,43 @@
 
         <li class="mission-card">
           <div class="mission-text">
-            <span class="mission-eyebrow">실습 미션 2 · 스튜디오</span>
-            <h3 class="mission-title">[스튜디오] 부서 전용 안내 챗봇 설계하기</h3>
+            <span class="mission-eyebrow">실습 미션 2 · 업무지원</span>
+            <h3 class="mission-title">🏫 업무지원 챗봇 만들기</h3>
             <ul class="mission-checklist">
-              <li>스튜디오에서 '새 챗봇 만들기'로 시작하기</li>
-              <li>담당 부서의 자주 묻는 질문(FAQ)을 역할·톤과 함께 입력하기</li>
-              <li>테스트 질문을 던져 답변 정확도와 어투 점검하기</li>
+              <li>스튜디오에서 교내 반복 행정 문의 응대용 업무지원 챗봇 만들기</li>
+              <li>아래 참고자료 PDF 3종을 다운로드해 챗봇 지식(파일)으로 업로드하기</li>
+              <li>프롬프트의 [추천 질문] 3가지를 챗봇의 추천 질문으로 등록하기</li>
+              <li>실제 질문을 입력해 답변의 정확도와 참고 자료 출처를 확인하기</li>
             </ul>
-            <div class="mission-warning">⚠️ 실제 민감 정보(개인정보·미확정 방침)는 입력하지 말고, 공개 가능한 정보로만 구성하세요.</div>
+            <div class="download-group">
+              <button type="button" class="download-btn" onclick="downloadFile(this,'doc1')">📎 참고자료1 증명서 발급 안내</button>
+              <button type="button" class="download-btn" onclick="downloadFile(this,'doc2')">📎 참고자료2 출장여비 정산 안내</button>
+              <button type="button" class="download-btn" onclick="downloadFile(this,'doc3')">📎 참고자료3 복리후생 제도 안내</button>
+            </div>
+            <div class="mission-warning">⚠️ 첨부 자료는 실습용 예시입니다. 답변은 참고용이며, 공식 절차·서류는 반드시 담당 부서를 통해 재확인하세요.</div>
           </div>
           <div class="prompt-panel">
             <div class="prompt-panel-head">
               <span class="label">실습 프롬프트 예시</span>
-              <button type="button" class="copy-btn" onclick="copyPrompt('prompt-2', this)">📋 프롬프트 복사</button>
+              <button type="button" class="copy-btn" onclick="copyPrompt('prompt-5', this)">📋 프롬프트 복사</button>
             </div>
-            <pre class="prompt-text" id="prompt-2">너는 한국에너지공과대학교 교무처 학사지원 챗봇이야.
-재학생의 수강신청·휴학·복학·졸업요건 문의에 친절하고 정확하게 답변해줘.
-모르는 내용은 담당 부서(교무처, 내선 000)로 안내해줘.
+            <pre class="prompt-text" id="prompt-5">너는 한국에너지공과대학교(KENTECH) 교내 업무지원 챗봇이야.
+증명서 발급, 출장여비 정산, 복리후생 제도 등 반복적인 행정 문의에 첨부된 자료를 근거로 정확하게 답변해줘.
+자료에 없는 내용은 담당 부서 안내로 대체해줘.
 
-[자주 묻는 질문]
-- 수강신청 정정기간은 언제인가요?
-- 복수전공은 언제부터 신청할 수 있나요?
-- 조기졸업 신청 조건은 무엇인가요?
+[첨부 자료]
+- 참고자료1: 증명서 발급 안내
+- 참고자료2: 국내 출장여비 정산 안내
+- 참고자료3: 교직원 복리후생 제도 안내
+
+[추천 질문]
+1. 재직증명서는 어디서, 어떻게 발급받을 수 있나요?
+2. 국내 출장 여비는 얼마까지, 어떻게 정산하나요?
+3. 통근버스 노선과 구내식당 이용 시간은 어떻게 확인하나요?
 
 [응답 규칙]
 - 존댓말, 3문장 이내로 답변
+- 답변 마지막에 참고한 자료명을 표시
 - 확실하지 않은 내용은 담당 부서 안내로 대체</pre>
           </div>
         </li>
@@ -1017,49 +1029,6 @@
 2. 긴급입찰의 근거가 되는 관련 법령·조항(국가를 당사자로 하는 계약에 관한 법률 및 시행령 등)을 조사해서 정리
 - 정확한 조항 번호는 최신 시행령을 확인해서 반영할 것</pre>
             </div>
-          </div>
-        </li>
-
-        <li class="mission-card">
-          <div class="mission-text">
-            <span class="mission-eyebrow">실습 미션 5 · 업무지원</span>
-            <h3 class="mission-title">🏫 업무지원 챗봇 만들기</h3>
-            <ul class="mission-checklist">
-              <li>스튜디오에서 교내 반복 행정 문의 응대용 업무지원 챗봇 만들기</li>
-              <li>아래 참고자료 PDF 3종을 다운로드해 챗봇 지식(파일)으로 업로드하기</li>
-              <li>프롬프트의 [추천 질문] 3가지를 챗봇의 추천 질문으로 등록하기</li>
-              <li>실제 질문을 입력해 답변의 정확도와 참고 자료 출처를 확인하기</li>
-            </ul>
-            <div class="download-group">
-              <button type="button" class="download-btn" onclick="downloadFile(this,'doc1')">📎 참고자료1 증명서 발급 안내</button>
-              <button type="button" class="download-btn" onclick="downloadFile(this,'doc2')">📎 참고자료2 출장여비 정산 안내</button>
-              <button type="button" class="download-btn" onclick="downloadFile(this,'doc3')">📎 참고자료3 복리후생 제도 안내</button>
-            </div>
-            <div class="mission-warning">⚠️ 첨부 자료는 실습용 예시입니다. 답변은 참고용이며, 공식 절차·서류는 반드시 담당 부서를 통해 재확인하세요.</div>
-          </div>
-          <div class="prompt-panel">
-            <div class="prompt-panel-head">
-              <span class="label">실습 프롬프트 예시</span>
-              <button type="button" class="copy-btn" onclick="copyPrompt('prompt-5', this)">📋 프롬프트 복사</button>
-            </div>
-            <pre class="prompt-text" id="prompt-5">너는 한국에너지공과대학교(KENTECH) 교내 업무지원 챗봇이야.
-증명서 발급, 출장여비 정산, 복리후생 제도 등 반복적인 행정 문의에 첨부된 자료를 근거로 정확하게 답변해줘.
-자료에 없는 내용은 담당 부서 안내로 대체해줘.
-
-[첨부 자료]
-- 참고자료1: 증명서 발급 안내
-- 참고자료2: 국내 출장여비 정산 안내
-- 참고자료3: 교직원 복리후생 제도 안내
-
-[추천 질문]
-1. 재직증명서는 어디서, 어떻게 발급받을 수 있나요?
-2. 국내 출장 여비는 얼마까지, 어떻게 정산하나요?
-3. 통근버스 노선과 구내식당 이용 시간은 어떻게 확인하나요?
-
-[응답 규칙]
-- 존댓말, 3문장 이내로 답변
-- 답변 마지막에 참고한 자료명을 표시
-- 확실하지 않은 내용은 담당 부서 안내로 대체</pre>
           </div>
         </li>
       </ol>
