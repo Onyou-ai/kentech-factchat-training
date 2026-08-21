@@ -564,6 +564,11 @@
     flex-direction:column;
     gap:0.7rem;
   }
+  .prompt-panel-group{
+    display:flex;
+    flex-direction:column;
+    gap:0.9rem;
+  }
   .prompt-panel-head{
     display:flex;
     align-items:center;
@@ -1042,12 +1047,13 @@
             </ul>
             <div class="mission-warning">⚠️ 공시자료는 기준 시점에 따라 달라질 수 있으니, 실제 의사결정 전 최신 공시자료로 재확인하고 대외비·미확정 수치는 입력하지 마세요.</div>
           </div>
-          <div class="prompt-panel">
-            <div class="prompt-panel-head">
-              <span class="label">실습 프롬프트 예시</span>
-              <button type="button" class="copy-btn" onclick="copyPrompt('prompt-6', this)">📋 프롬프트 복사</button>
-            </div>
-            <pre class="prompt-text" id="prompt-6">너는 한국에너지공과대학교(KENTECH) 기획처의 대학 정책 담당자야.
+          <div class="prompt-panel-group">
+            <div class="prompt-panel">
+              <div class="prompt-panel-head">
+                <span class="label">실습 프롬프트 예시</span>
+                <button type="button" class="copy-btn" onclick="copyPrompt('prompt-6', this)">📋 프롬프트 복사</button>
+              </div>
+              <pre class="prompt-text" id="prompt-6">너는 한국에너지공과대학교(KENTECH) 기획처의 대학 정책 담당자야.
 대학알리미 등 공시 데이터를 바탕으로 KENTECH와 GIST, DGIST, UNIST를 비교하고 싶어.
 
 [요청]
@@ -1055,13 +1061,14 @@
 2. KENTECH가 상대적으로 강점·약점을 보이는 지표를 짚어서 설명
 3. 비교에 사용한 공시자료의 기준 연도와 출처를 표시
 - 확인되지 않은 수치는 추정임을 명시할 것</pre>
-          </div>
-          <div class="prompt-panel" style="grid-column:2; margin-top:1rem;">
-            <div class="prompt-panel-head">
-              <span class="label">마무리 프롬프트 예시</span>
-              <button type="button" class="copy-btn" onclick="copyPrompt('prompt-6b', this)">📋 프롬프트 복사</button>
             </div>
-            <pre class="prompt-text" id="prompt-6b">해당 내용을 보고서로 만들어줘.</pre>
+            <div class="prompt-panel">
+              <div class="prompt-panel-head">
+                <span class="label">마무리 프롬프트 예시</span>
+                <button type="button" class="copy-btn" onclick="copyPrompt('prompt-6b', this)">📋 프롬프트 복사</button>
+              </div>
+              <pre class="prompt-text" id="prompt-6b">해당 내용을 보고서로 만들어줘.</pre>
+            </div>
           </div>
         </li>
 
