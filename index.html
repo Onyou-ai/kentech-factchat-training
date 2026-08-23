@@ -945,43 +945,111 @@
           </div>
         </li>
 
-        <li class="mission-card">
-          <div class="mission-text">
+        <li class="mission-card mission-card--stacked">
+          <div class="mission-card-head">
             <span class="mission-eyebrow">실습 미션 3 · 심화 · 프로젝트 기능</span>
             <h3 class="mission-title">📁 프로젝트 기능으로 해외 에너지대학원 벤치마킹하기</h3>
-            <ul class="mission-checklist">
-              <li>팩트챗 프로젝트 기능으로 새 프로젝트 생성하기</li>
-              <li>아래 참고자료 PDF 3종(미국·일본·유럽 에너지특성화대학원 현황)을 다운로드해 프로젝트 지식(파일)에 업로드하기</li>
-              <li>아래 프롬프트로 미국 대학원 정성 리서치를 요청하고 결과를 파일 1개로 저장하기</li>
-              <li>같은 프로젝트 안에서 '이번엔 일본 대학원 기준으로', '이번엔 유럽 대학원 기준으로'만 바꿔 재요청 → 미국·일본·유럽 자료 3개 완성하기</li>
-            </ul>
-            <div class="download-group">
-              <button type="button" class="download-btn" onclick="downloadFile(this,'benchUs')">📎 참고자료1 미국 에너지특성화대학원 현황</button>
-              <button type="button" class="download-btn" onclick="downloadFile(this,'benchJp')">📎 참고자료2 일본 에너지특성화대학원 현황</button>
-              <button type="button" class="download-btn" onclick="downloadFile(this,'benchEu')">📎 참고자료3 유럽 에너지특성화대학원 현황</button>
-            </div>
-            <div class="mission-warning">⚠️ 첨부 자료는 실습용 예시 데이터입니다. 국가만 바꿔 반복 요청하면 같은 프로젝트 안에서 미국·일본·유럽 리포트를 빠르게 완성할 수 있습니다. 단, 결과에는 AI의 추정이 섞일 수 있으니 실제 의사결정 전 기획처 검토를 거치고, 대외비 자료나 미확정 정원·예산은 입력하지 마세요.</div>
           </div>
-          <div class="prompt-panel">
-            <div class="prompt-panel-head">
-              <span class="label">실습 프롬프트 예시</span>
-              <button type="button" class="copy-btn" onclick="copyPrompt('prompt-3', this)">📋 프롬프트 복사</button>
+
+          <div class="mission-subitem">
+            <div class="mission-text">
+              <span class="mission-subtitle">1) 지시문 등록하기 — 페르소나·출력 형식 고정</span>
+              <ul class="mission-checklist">
+                <li>팩트챗 프로젝트 기능으로 새 프로젝트 생성하기</li>
+                <li>프로젝트 설정 → 지시문에 아래 프롬프트를 등록하기</li>
+                <li>지시문은 프로젝트 내 모든 채팅에 자동 적용되므로, 이후 채팅에서는 페르소나·형식을 다시 설명할 필요가 없음을 확인하기</li>
+              </ul>
             </div>
-            <pre class="prompt-text" id="prompt-3">너는 한국에너지공과대학교(KENTECH) 기획처의 대학원 기획 담당자야.
-해외 에너지특성화대학원 신설을 검토 중인데, 먼저 미국 대학원을 정성적으로 조사하고 싶어.
-첨부한 '해외 에너지특성화대학원 현황 데이터_추출본 (미국)' 파일을 참고해서 아래 5가지 주제로 정리해줘.
+            <div class="prompt-panel">
+              <div class="prompt-panel-head">
+                <span class="label">지시문 등록 프롬프트</span>
+                <button type="button" class="copy-btn" onclick="copyPrompt('prompt-3-instruction', this)">📋 프롬프트 복사</button>
+              </div>
+              <pre class="prompt-text" id="prompt-3-instruction">너는 한국에너지공과대학교(KENTECH) 기획처의 대학원 기획 담당자야.
+해외 에너지특성화대학원 신설을 검토하기 위해, 프로젝트에 첨부된 '해외 에너지특성화대학원 현황 데이터_추출본' 자료를 근거로 국가별 정성 리서치를 진행해.
 
 [출력 형식]
-표 · 텍스트를 자유롭게 섞어 정리하고, 확인된 사실과 너의 추정은 구분해줘.
+- 표 · 텍스트를 함께 사용하고, 아래 5가지 항목 순서를 항상 지킬 것
+  1. 특성화 포인트  2. 모집 채널  3. 정원 및 경쟁률  4. 지원자 관점  5. 정책 환경
+- 첨부 자료로 확인된 사실과 너의 추정은 반드시 구분해서 표시
+- 대외비 · 미확정 수치는 답변에 포함하지 말 것</pre>
+            </div>
+          </div>
 
-1. 특성화 포인트 - 에너지 분야로 특성화된 대학원 · 커리큘럼 · 산학협력 실적 (예: MIT Energy Initiative, TU Delft 등)
-2. 모집 채널 - 대학 홈페이지, 유학 박람회, 정부 장학 프로그램(Fulbright 등)
-3. 정원 및 경쟁률 - QS/THE 랭킹 등 학교별 정원 · 경쟁률 자료
-4. 지원자 관점 - 유학 커뮤니티 · SNS에서의 지원 호감/비호감 이유
-5. 정책 환경 - 비자 · 이민 · 연구비 지원 등 유학 관련 정책
+          <div class="mission-subitem">
+            <div class="mission-text">
+              <span class="mission-subtitle">2) 메모리로 반복 규칙 저장하기</span>
+              <ul class="mission-checklist">
+                <li>아래 프롬프트를 채팅창에 입력해 정렬 규칙을 요청하기</li>
+                <li>AI가 규칙을 프로젝트 메모리에 자동 저장했는지 메모리 패널에서 확인하기</li>
+                <li>이후 일본 · 유럽 요청 시 규칙을 다시 설명하지 않아도 적용되는지 확인하기</li>
+              </ul>
+            </div>
+            <div class="prompt-panel">
+              <div class="prompt-panel-head">
+                <span class="label">채팅 프롬프트 · 메모리 저장 유도</span>
+                <button type="button" class="copy-btn" onclick="copyPrompt('prompt-3-memory', this)">📋 프롬프트 복사</button>
+              </div>
+              <pre class="prompt-text" id="prompt-3-memory">앞으로 이 프로젝트에서 국가별 리포트를 만들 때는 각 표를 QS · THE 랭킹이 높은 대학 순으로 정렬해줘.
+이 규칙은 프로젝트 메모리에 저장해서, 다음 대화부터는 다시 설명하지 않아도 항상 적용해줘.</pre>
+            </div>
+          </div>
 
-[다음 단계]
-이건 '미국' 기준이야. 이어서 첨부한 '해외 에너지특성화대학원 현황 데이터_추출본 (일본)', '(유럽)' 파일을 순서대로 참고해 "이번엔 일본 대학원 기준으로", "이번엔 유럽 대학원 기준으로"라고 요청할 테니 같은 틀로 정리해줘.</pre>
+          <div class="mission-subitem">
+            <div class="mission-text">
+              <span class="mission-subtitle">3) 파일 업로드하기</span>
+              <ul class="mission-checklist">
+                <li>아래 참고자료 PDF 3종(미국 · 일본 · 유럽 에너지특성화대학원 현황)을 다운로드하기</li>
+                <li>프로젝트 설정 → 파일에 3개 파일을 모두 업로드하기</li>
+              </ul>
+              <div class="download-group">
+                <button type="button" class="download-btn" onclick="downloadFile(this,'benchUs')">📎 참고자료1 미국 에너지특성화대학원 현황</button>
+                <button type="button" class="download-btn" onclick="downloadFile(this,'benchJp')">📎 참고자료2 일본 에너지특성화대학원 현황</button>
+                <button type="button" class="download-btn" onclick="downloadFile(this,'benchEu')">📎 참고자료3 유럽 에너지특성화대학원 현황</button>
+              </div>
+              <div class="mission-warning">⚠️ 첨부 자료는 실습용 예시 데이터입니다. 결과에는 AI의 추정이 섞일 수 있으니 실제 의사결정 전 기획처 검토를 거치고, 대외비 자료나 미확정 정원 · 예산은 입력하지 마세요.</div>
+            </div>
+          </div>
+
+          <div class="mission-subitem">
+            <div class="mission-text">
+              <span class="mission-subtitle">4) 채팅으로 국가별 리포트 완성하기</span>
+              <ul class="mission-checklist">
+                <li>지시문 · 메모리 · 파일이 모두 준비된 채팅에서 아래 프롬프트로 미국 리포트를 요청하기</li>
+                <li>같은 프로젝트 안에서 '일본', '유럽'으로만 바꿔 재요청하기</li>
+                <li>완성된 리포트를 파일 1개로 저장 요청하기</li>
+              </ul>
+            </div>
+            <div class="prompt-panel-group">
+              <div class="prompt-panel">
+                <div class="prompt-panel-head">
+                  <span class="label">채팅 프롬프트 1 · 미국</span>
+                  <button type="button" class="copy-btn" onclick="copyPrompt('prompt-3-us', this)">📋 프롬프트 복사</button>
+                </div>
+                <pre class="prompt-text" id="prompt-3-us">첨부한 '해외 에너지특성화대학원 현황 데이터_추출본 (미국)' 파일을 참고해서 미국 대학원 기준으로 정리해줘.</pre>
+              </div>
+              <div class="prompt-panel">
+                <div class="prompt-panel-head">
+                  <span class="label">채팅 프롬프트 2 · 일본</span>
+                  <button type="button" class="copy-btn" onclick="copyPrompt('prompt-3-jp', this)">📋 프롬프트 복사</button>
+                </div>
+                <pre class="prompt-text" id="prompt-3-jp">이번엔 첨부한 '해외 에너지특성화대학원 현황 데이터_추출본 (일본)' 파일을 참고해서 일본 대학원 기준으로 정리해줘.</pre>
+              </div>
+              <div class="prompt-panel">
+                <div class="prompt-panel-head">
+                  <span class="label">채팅 프롬프트 3 · 유럽</span>
+                  <button type="button" class="copy-btn" onclick="copyPrompt('prompt-3-eu', this)">📋 프롬프트 복사</button>
+                </div>
+                <pre class="prompt-text" id="prompt-3-eu">이번엔 첨부한 '해외 에너지특성화대학원 현황 데이터_추출본 (유럽)' 파일을 참고해서 유럽 대학원 기준으로 정리해줘.</pre>
+              </div>
+              <div class="prompt-panel">
+                <div class="prompt-panel-head">
+                  <span class="label">마무리 프롬프트 · 파일 저장</span>
+                  <button type="button" class="copy-btn" onclick="copyPrompt('prompt-3-save', this)">📋 프롬프트 복사</button>
+                </div>
+                <pre class="prompt-text" id="prompt-3-save">지금까지 정리한 미국 · 일본 · 유럽 리포트를 하나의 파일로 저장해줘.</pre>
+              </div>
+            </div>
           </div>
         </li>
 
