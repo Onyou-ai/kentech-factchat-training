@@ -969,9 +969,9 @@
 해외 에너지특성화대학원 신설을 검토하기 위해, 프로젝트에 첨부된 '해외 에너지특성화대학원 현황 데이터_추출본' 자료를 근거로 국가별 정성 리서치를 진행해.
 
 [출력 형식]
-- 표 · 텍스트를 함께 사용하고, 아래 5가지 항목 순서를 항상 지킬 것
+- 국가별 사례를 정리할 때는 아래 5가지 항목을 기본 틀로 사용할 것 (질문이 비교 · 요약을 물으면 이 틀에 얽매이지 말고 의도에 맞게 답할 것)
   1. 특성화 포인트  2. 모집 채널  3. 정원 및 경쟁률  4. 지원자 관점  5. 정책 환경
-- 첨부 자료로 확인된 사실과 너의 추정은 반드시 구분해서 표시
+- 표 · 텍스트를 자유롭게 섞어 쓰고, 첨부 자료로 확인된 사실과 너의 추정은 반드시 구분해서 표시
 - 대외비 · 미확정 수치는 답변에 포함하지 말 것</pre>
             </div>
           </div>
@@ -1015,9 +1015,9 @@
             <div class="mission-text">
               <span class="mission-subtitle">4) 채팅으로 국가별 리포트 완성하기</span>
               <ul class="mission-checklist">
-                <li>지시문 · 메모리 · 파일이 모두 준비된 채팅에서 아래 프롬프트로 미국 리포트를 요청하기</li>
-                <li>같은 프로젝트 안에서 '일본', '유럽'으로만 바꿔 재요청하기</li>
-                <li>완성된 리포트를 파일 1개로 저장 요청하기</li>
+                <li>지시문 · 메모리 · 파일이 모두 준비된 채팅에서 미국 사례부터 물어보기</li>
+                <li>일본 · 유럽으로 이어가며 KENTECH 입장에서 비교 · 시사점 위주로 질문하기</li>
+                <li>마지막에 종합 비교 보고서를 파일 1개로 저장 요청하기</li>
               </ul>
             </div>
             <div class="prompt-panel-group">
@@ -1026,28 +1026,28 @@
                   <span class="label">채팅 프롬프트 1 · 미국</span>
                   <button type="button" class="copy-btn" onclick="copyPrompt('prompt-3-us', this)">📋 프롬프트 복사</button>
                 </div>
-                <pre class="prompt-text" id="prompt-3-us">첨부한 '해외 에너지특성화대학원 현황 데이터_추출본 (미국)' 파일을 참고해서 미국 대학원 기준으로 정리해줘.</pre>
+                <pre class="prompt-text" id="prompt-3-us">미국 에너지특성화대학원 사례부터 살펴보고 싶어. 그 중에서 KENTECH가 특히 참고할 만한 학교와 이유를 짚어줘.</pre>
               </div>
               <div class="prompt-panel">
                 <div class="prompt-panel-head">
                   <span class="label">채팅 프롬프트 2 · 일본</span>
                   <button type="button" class="copy-btn" onclick="copyPrompt('prompt-3-jp', this)">📋 프롬프트 복사</button>
                 </div>
-                <pre class="prompt-text" id="prompt-3-jp">이번엔 첨부한 '해외 에너지특성화대학원 현황 데이터_추출본 (일본)' 파일을 참고해서 일본 대학원 기준으로 정리해줘.</pre>
+                <pre class="prompt-text" id="prompt-3-jp">이번엔 일본 사례도 정리해줘. 미국이랑 비교했을 때 KENTECH가 눈여겨볼 만한 차이점이 있으면 짚어줘.</pre>
               </div>
               <div class="prompt-panel">
                 <div class="prompt-panel-head">
                   <span class="label">채팅 프롬프트 3 · 유럽</span>
                   <button type="button" class="copy-btn" onclick="copyPrompt('prompt-3-eu', this)">📋 프롬프트 복사</button>
                 </div>
-                <pre class="prompt-text" id="prompt-3-eu">이번엔 첨부한 '해외 에너지특성화대학원 현황 데이터_추출본 (유럽)' 파일을 참고해서 유럽 대학원 기준으로 정리해줘.</pre>
+                <pre class="prompt-text" id="prompt-3-eu">유럽 사례도 같은 방식으로 봐줘. 그리고 지금까지 본 미국 · 일본 · 유럽 사례를 종합했을 때, KENTECH가 해외 에너지특성화대학원을 신설한다면 꼭 참고해야 할 시사점 3가지만 뽑아줘.</pre>
               </div>
               <div class="prompt-panel">
                 <div class="prompt-panel-head">
                   <span class="label">마무리 프롬프트 · 파일 저장</span>
                   <button type="button" class="copy-btn" onclick="copyPrompt('prompt-3-save', this)">📋 프롬프트 복사</button>
                 </div>
-                <pre class="prompt-text" id="prompt-3-save">지금까지 정리한 미국 · 일본 · 유럽 리포트를 하나의 파일로 저장해줘.</pre>
+                <pre class="prompt-text" id="prompt-3-save">지금까지 내용을 미국 · 일본 · 유럽 비교표와 시사점이 담긴 보고서 파일 1개로 정리해줘.</pre>
               </div>
             </div>
           </div>
