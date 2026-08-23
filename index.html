@@ -456,6 +456,59 @@
     margin-bottom:0.6rem;
   }
 
+  /* process flow (STEP 03) */
+  .process-flow{
+    display:grid;
+    grid-template-columns:1fr auto 1fr auto 1fr;
+    align-items:center;
+    gap:1.2rem;
+  }
+  @media (max-width:860px){ .process-flow{grid-template-columns:1fr; gap:1rem;} }
+  .process-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:1.6rem 1.4rem;
+    box-shadow:var(--shadow);
+  }
+  .process-card .process-step{
+    display:inline-block;
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:700;
+    font-size:0.78rem;
+    letter-spacing:0.06em;
+    color:#fff;
+    background:linear-gradient(120deg, var(--brand-navy), var(--brand-blue));
+    padding:0.3rem 0.8rem;
+    border-radius:999px;
+    margin-bottom:0.9rem;
+  }
+  .process-card h3{font-size:1.1rem; font-weight:800; margin:0 0 0.8rem;}
+  .process-card .process-feature{
+    font-size:0.88rem;
+    color:var(--text-strong,inherit);
+    font-weight:700;
+    margin-bottom:0.5rem;
+  }
+  .process-card .process-feature-tag{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:0.68rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--accent-text);
+    font-weight:700;
+    margin-right:0.5rem;
+  }
+  .process-card p{margin:0; color:var(--text-soft); font-size:0.9rem; line-height:1.6;}
+  .process-arrow{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.4rem;
+    color:var(--border);
+  }
+  @media (max-width:860px){ .process-arrow{display:none;} }
+
   /* practice missions */
   .mission-list{
     list-style:none;
@@ -770,52 +823,32 @@
       <div class="chapter-head">
         <div class="head-left">
           <span class="eyebrow">STEP 03</span>
-          <h2>팩트챗 에이전트, 한눈에 보기</h2>
+          <h2>팩트챗 업무 자동화, 3단계로 시작하기</h2>
         </div>
         <div class="chapter-num num">03</div>
       </div>
-      <p class="lede">팩트챗 안에는 목적에 따라 골라 쓰는 여러 에이전트가 있습니다.<br>이름과 한 줄 소개로 먼저 감을 잡아보세요.</p>
+      <p class="lede">업무 자동화는 비교·검토 → 업무환경 구축 → 전문업무 실행, 3단계로 이어집니다.<br>각 단계에서 어떤 기능을 쓰면 좋을지 먼저 감을 잡아보세요.</p>
 
-      <div class="feature-grid">
-        <div class="feature-card">
-          <span class="f-tag">Chat</span>
-          <h3>💬 멀티 LLM 챗봇</h3>
-          <p>GPT·Gemini·Claude 등 여러 모델을 한 화면에서 골라 쓰는 기본 채팅.</p>
+      <div class="process-flow">
+        <div class="process-card">
+          <span class="process-step">STEP 1</span>
+          <h3>🔍 비교, 검토</h3>
+          <div class="process-feature"><span class="process-feature-tag">활용 기능</span> 챗봇 비교</div>
+          <p>여러 답변을 비교해 더 적합한 초안을 선택합니다.</p>
         </div>
-        <div class="feature-card">
-          <span class="f-tag">Agent</span>
-          <h3>🤖 Super Agent</h3>
-          <p>웹서치·영상분석·문서생성을 한 번의 요청으로 알아서 처리하는 만능 에이전트.</p>
+        <div class="process-arrow">→</div>
+        <div class="process-card">
+          <span class="process-step">STEP 2</span>
+          <h3>🏗️ 업무환경 구축</h3>
+          <div class="process-feature"><span class="process-feature-tag">활용 기능</span> Studio, Project</div>
+          <p>반복 문의를 챗봇으로 만들고, 자료와 대화 맥락을 축적합니다.</p>
         </div>
-        <div class="feature-card">
-          <span class="f-tag">Builder</span>
-          <h3>🛠️ Studio(스튜디오)</h3>
-          <p>코딩 없이 부서 맞춤형 업무용 챗봇을 직접 설계하는 공간.</p>
-        </div>
-        <div class="feature-card">
-          <span class="f-tag">Workspace</span>
-          <h3>📁 Project(프로젝트)</h3>
-          <p>자료와 대화 맥락을 한 곳에 모아 반복 없이 이어가는 작업 공간.</p>
-        </div>
-        <div class="feature-card">
-          <span class="f-tag">Document</span>
-          <h3>📄 HWP 작성 에이전트</h3>
-          <p>공문서·보고서를 한글(HWP) 양식에 맞춰 자동으로 작성.</p>
-        </div>
-        <div class="feature-card">
-          <span class="f-tag">Media</span>
-          <h3>🎨 이미지·영상 생성 에이전트</h3>
-          <p>행사·홍보용 이미지와 영상을 텍스트 설명만으로 제작.</p>
-        </div>
-        <div class="feature-card">
-          <span class="f-tag">Research</span>
-          <h3>🔎 Deep Research</h3>
-          <p>여러 자료를 깊게 탐색해 근거를 갖춘 심층 리포트를 자동으로 작성.</p>
-        </div>
-        <div class="feature-card">
-          <span class="f-tag">Meeting</span>
-          <h3>📝 회의록 자동화 에이전트</h3>
-          <p>회의 내용을 자동으로 정리해 회의록과 실행 항목까지 생성.</p>
+        <div class="process-arrow">→</div>
+        <div class="process-card">
+          <span class="process-step">STEP 3</span>
+          <h3>🚀 전문업무 실행</h3>
+          <div class="process-feature"><span class="process-feature-tag">활용 기능</span> HWP 작성, Univ in Data, Law in Data</div>
+          <p>문서 작성, 대학 데이터 분석, 법령 검토를 근거 기반으로 정확하고 신속하게 처리합니다.</p>
         </div>
       </div>
     </div>
